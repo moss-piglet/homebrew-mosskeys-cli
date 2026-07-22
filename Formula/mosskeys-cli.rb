@@ -19,23 +19,23 @@ class MosskeysCli < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.2.3/mosskeys-0.2.3-aarch64-apple-darwin.tar.gz"
-      sha256 "ec8e286896240777fb1a662d6904d7ccc4a11ed27c9cfd53b66595fbc4196aed"
+      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.2.4/mosskeys-0.2.4-aarch64-apple-darwin.tar.gz"
+      sha256 "701d5ab33141f37c84dec205d49635d750f5a41127562bb4ac98bef707403181"
     end
     on_intel do
-      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.2.3/mosskeys-0.2.3-x86_64-apple-darwin.tar.gz"
-      sha256 "e2d8eb9847f59e21510de07cdf0082fa99bff837fab178b52ac3e0d212e5f8ba"
+      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.2.4/mosskeys-0.2.4-x86_64-apple-darwin.tar.gz"
+      sha256 "22b6082c61f4e4ac18988bb096fb27e6073d2d163266853f5b5eb5ef0d3a8afc"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.2.3/mosskeys-0.2.3-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "9146d5c30dcf04718f1bcd44826b525ed46fea5ca6f9b1dcc3a9a712dc148a15"
+      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.2.4/mosskeys-0.2.4-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "8599297e735c932b88aea6d7a144d8a9d7166e5afac10222e1315448bdbf72f1"
     end
     on_intel do
-      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.2.3/mosskeys-0.2.3-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "145d4b6ad0828e9fd94cd7f406b0735ab4a9069e430deb6c2d4a7c335fa29be2"
+      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.2.4/mosskeys-0.2.4-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bec97c7587f73f6d2212cfd871edbc823055efd3d3629b5f79f916213700f843"
     end
   end
 
