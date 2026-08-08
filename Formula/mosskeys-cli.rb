@@ -19,28 +19,31 @@ class MosskeysCli < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.3.0/mosskeys-0.3.0-aarch64-apple-darwin.tar.gz"
-      sha256 "ddbcfbb5623c4277dfb01dc85133cc70cb55e764feb70fa083196f94461a6162"
+      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.3.1/mosskeys-0.3.1-aarch64-apple-darwin.tar.gz"
+      sha256 "e12ca63e47b205e90e557bf7c4e2d9041d3ed3931b7069a3a45b97fb8b75e1cd"
     end
     on_intel do
-      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.3.0/mosskeys-0.3.0-x86_64-apple-darwin.tar.gz"
-      sha256 "8772ff01e33b2e788012bedf10bf212b7b998fc9e84fdd8f71c380efbea858dc"
+      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.3.1/mosskeys-0.3.1-x86_64-apple-darwin.tar.gz"
+      sha256 "594cea83061b97b3ecad735808d115180fb4775918fe6e57e407408dfc7c7344"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.3.0/mosskeys-0.3.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e948bc067b408f39f160a8cb026e7a19f2d024f866725f22b698ca9bd353cbf0"
+      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.3.1/mosskeys-0.3.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "0388ceffebc5474cfa2c5b5cb3013897405eebe1577a4fe12760d0a82ab77b96"
     end
     on_intel do
-      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.3.0/mosskeys-0.3.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3f5c42d5210b236e7d458953879d9614d774c3de6a1f8cf5c03b3619c3fc6dd3"
+      url "https://github.com/moss-piglet/mosskeys-cli/releases/download/v0.3.1/mosskeys-0.3.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "1c2df07c4c5b8f08e8ffae624f677404f65e29d5f1e17aa4f3d894601827feb8"
     end
   end
 
   def install
     bin.install "mosskeys"
+    # Runs `mosskeys completions <shell>` at install time and links the
+    # scripts into the brew-managed completion dirs (bash/zsh/fish).
+    generate_completions_from_executable bin/"mosskeys", "completions"
   end
 
   test do
